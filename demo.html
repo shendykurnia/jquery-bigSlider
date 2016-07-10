@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>bigSlider Demo</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #wrapper1 {
+        height: 300px;
+        width: 100%;
+    }
+
+    #wrapper2 {
+        height: 300px;
+        width: 500px;
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+<div id='wrapper1'>
+    <img src='images/1.jpg'/>
+    <img src='images/2.jpg'/>
+    <img src='images/3.jpg'/>
+    <img src='images/4.jpg'/>
+    <img src='images/5.jpg'/>
+    <img src='images/6.jpg'/>
+    <img src='images/7.jpg'/>
+</div>
+<div id='wrapper2'>
+    <img src='images2/1.png'/>
+    <img src='images2/2.png'/>
+    <img src='images2/3.png'/>
+    <img src='images2/4.png'/>
+    <img src='images2/5.png'/>
+    <img src='images2/6.png'/>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="jquery-bigSlider.js"></script>
+<script type="text/javascript">
+jQuery('#wrapper1').bigSlider();
+jQuery('#wrapper2').bigSlider({
+    focusType: 'enlarge',
+    animationDuration: 400
+});
+</script>
+</body>
+</html>
