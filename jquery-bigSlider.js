@@ -40,10 +40,15 @@
 
             var wrapper = this;
             var proceed = function() {
-                images.each(function() {
+                images.each(function(index, element) {
                     $(this).css({
                         position: 'absolute',
-                        height: '100%'
+                        height: '100%',
+                        cursor: 'pointer'
+                    }).click(function() {
+                        if (index == currentIndex) {
+                            next();
+                        }
                     });
                 });
 
@@ -66,7 +71,8 @@
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    height: '100%'
+                    height: '100%',
+                    cursor: 'pointer'
                 });
                 var rightShadow = leftShadow.clone().css({
                     left: 'auto',
